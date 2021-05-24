@@ -10,9 +10,9 @@
     <title><?php echo $title; ?></title>
 </head>
 <body onload="myFunction()">
-    <h1 style="color: #05d9e8 ; font-size: 750%" class="center">Welcome</h1>
+    <h1 style="color: grey ; font-size: 900%" class="center">Welcome</h1>
     <div id="container">
-        <button class="button button1" href="#">Voter login</button>
+        <button class="button button1" href="Voters/index.html">Voter login</button>
         <button class="button button2" href="#">Staff login</button>
     </div>
 
@@ -22,21 +22,20 @@
         font-weight: normal;
         font-style: normal;
         float: center;
-        color:#ff2a6d;
         text-align: center;
-        text-shadow: 8px 0 10px #ff2a6d, -8px 0 10px #2600ff;
     }
     body{
-    background-color: #01060f ;
+    background-color: #efefef ;
     }
 
     .button{
-        font-size: 24px;
+        font-family:'expletus_sansregular';
+        font-size: 50px;
         display: inline-block;
         text-decoration: none;
-        background-color: #ff2a6d;
+        background-color: transparent;
         border: none;
-        color: white;
+        color: #ff3b3f;
         padding: 24px 40px;
         margin: 4px 2px;
         cursor: pointer;
@@ -45,11 +44,11 @@
         text-align: center;
     }
     .button1{
-        margin-left: 36%;
+        margin-left: 34%;
     }
 
     .button2{
-        margin-left: 200px;
+        margin-left: 160px;
     }
 
 </style>

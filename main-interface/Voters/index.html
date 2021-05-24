@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+	<script src='js/validate-login.js'></script>
+</head>
+<body>
+	<h2>Login</h2>
+	<form method="POST" action="Login.php" onsubmit="return validate()" >
+		<div class="form-container">
+			<div>
+				Voters_ID
+			</div>
+
+			<div>
+				<input type="text" class="inputc" name="id">
+			</div>
+			<div>
+				Password
+			</div>
+			<div>
+				<input type="password" class="inputc1" name="password">
+			</div>
+			<div>
+			</div>
+			<div>
+				<input type="submit" class="btn" name="submit">
+			</div>
+		</div>
+	</form>
+	<div class="form-container1">
+		<a href="registration.html" style="text-decoration: none;">create account</a>
+	</div>
+</body>
+</html> 
