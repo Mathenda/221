@@ -12,7 +12,7 @@ include('../config.php');
     <link rel="stylesheet" href="../navbare/stylesheet.css">
     <head>
 
-    <title><?php echo $title; ?></title>
+    <title>staff homepage</title>
 </head>
 <body>
 <div id="header">
@@ -26,7 +26,7 @@ include('../config.php');
             <form class="navbar">
                 <a href="#" class="button">register voter</a>
                 <a href="#" class="button">update districts</a>
-                <a href="#" class="button" disabled>capture party information</a>
+                <a href="addparty.php" class="button">capture party information</a>
                 <a href="#" class="button" disabled>get report</a>
             </form>
         </nav>
