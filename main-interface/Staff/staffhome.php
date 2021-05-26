@@ -27,7 +27,6 @@ include('../config.php');
                 <a href="#" class="button">register voter</a>
                 <a href="updatedistrict.php" class="button">update districts</a>
                 <a href="addparty.php" class="button">capture party information</a>
-                <a href="#" class="button">get report</a>
             </form>
         </nav>
     <a href="../geninterface.php" class="fa fa-home fa-2x" style="color: grey;padding: 8px;" id= "home"></a>

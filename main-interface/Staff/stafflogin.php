@@ -14,11 +14,12 @@
 <body onload="myFunction()">
     <h1 style="color: #DEB992 ; font-size: 750%" class="center">Login</h1>
     <form action="validatestafflogin.php" method="post" onkeypress="return event.keyCode != 13 && event.keyCode != 32;">
+    
     <input type="text" id="fname" name="fname" placeholder="Name" required autocomplete="off" value="<?php echo $_SESSION["user"] ?>"><br><br>
     <?php if(isset($Nerror)): ?>
     <span><?php echo $Nerror; ?></span>
     <?php endif ?>    
-    <input type="text" id="pass" name="pass" placeholder="Password" required autocomplete="off" onkeyup="Validatepassword(pass)><h3 class="button" style="font-size:24px" onclick="myFunction()"><i class="fa fa-eye" id="eye"></i></h3><br><br>
+    <input type="text" id="pass" name="pass" placeholder="Password" required autocomplete="off" onkeyup="Validatepassword(pass)"><h3 class="button" style="font-size:24px" onclick="myFunction()"><i class="fa fa-eye" id="eye"></i></h3><br><br>
     <script type="application/javascript">
         function myFunction() {
             var x = document.getElementById("pass");
@@ -135,7 +136,7 @@
         cursor: pointer;
         position: absolute;
         color: black;
-        top: 42.7%;
+        top: 46.7%;
         left: 62.5%;
         transform: translate(-50%,-50%);
         border: none;
@@ -143,7 +144,7 @@
 
     #eye{
         position: absolute;
-        top: 49.5%;
+        top: 51.5%;
         left: 62.5%;
         transform: translate(-50%,-50%);
         color: black;
