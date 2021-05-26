@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 $title = "login";
 $servername = "127.0.0.1";
 $userna = "root";
@@ -7,25 +8,15 @@ $passwo = "57074";
 $db = new mysqli($servername, $userna,$passwo, 'voting_DB');
 
 if(isset($_POST)){
-    $username = mysqli_real_escape_string($db, $_POST['pname']);
-    $pid =  mysqli_real_escape_string($db, $_POST['pid']);
-    $check_u = "SELECT * FROM party WHERE party_name='$username' OR party_id='$pid'";
-    $get_u = mysqli_query($db, $check_u);
-
-    if(mysqli_num_rows($get_u) >0){
-        $Nerror = "party already exists";
-        $username = "error";
-        $_SESSION["party"] = "party already exists";
-        header('Location: addparty.php');
-    }else{
-        $check_u = "INSERT INTO party (party_ID, party_name) VALUES ('$pid', '$username')";
-        $get_u = mysqli_query($db, $check_u);
-        $_SESSION["party"] = $username;
-    }
-
+    $dis = mysqli_real_escape_string($db, $_POST["district"]); 
+    $dis +=1;
+    $cha = mysqli_real_escape_string($db, $_POST["change"]); 
+    $up_v = "UPDATE district SET District_vote = '$cha' WHERE district_ID = '$dis'";
+    $get_u = mysqli_query($db, $up_v);
     $db->close();
 }
 ?>
+
 
 <!DOCTYPE html>
 <html5>
@@ -45,8 +36,7 @@ if(isset($_POST)){
             include "../config.php";
         ?>
     </div>
-    <h1 style="color: #DEB992 ; font-size: 900%" class="center"><?php echo $_SESSION["party"]; ?></h1>
-    <h1 style="color: #DEB992; font-size: 300%" id="keyy" class="center">successfully added</h1>
+    <h1 style="color: #DEB992; font-size: 300%" id="keyy" class="center">district successfully changed <?php echo $dis ?></h1>
     <h2 id= "back" onclick="prev()">&#171;</h2>
     <script type="application/javascript">
         function prev(){
