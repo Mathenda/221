@@ -10,7 +10,7 @@
     <title><?php echo $title; ?></title>
 </head>
 <body onload="myFunction()">
-    <h1 style="color: grey ; font-size: 900%" class="center">Welcome</h1>
+    <h1 style="color: grey ; font-size: 898%" class="center">Welcome</h1>
     <div id="container">
         <button class="button button1" href="Voters/index.html">Voter login</button>
         <button class="button button2" href="#">Staff login</button>
